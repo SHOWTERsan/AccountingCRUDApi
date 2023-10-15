@@ -2,8 +2,8 @@ package ru.santurov.accountingcrud.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import ru.santurov.accountingcrud.models.Department;
+import ru.santurov.accountingcrud.models.Corpus;
 
 @Repository
-public interface DepartmentRepository extends CrudRepository<Department, Long> {
+public interface CorpusRepository extends CrudRepository<Corpus, Long> {
 }

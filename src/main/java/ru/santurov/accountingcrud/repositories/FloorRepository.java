@@ -2,9 +2,9 @@ package ru.santurov.accountingcrud.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-import ru.santurov.accountingcrud.models.Corps;
+import org.springframework.stereotype.Repository;
+import ru.santurov.accountingcrud.models.Floor;
 
-@RepositoryRestResource(path = "corps")
-public interface CorpsRepository extends CrudRepository<Corps, Long> {
-
+@Repository
+public interface FloorRepository extends CrudRepository<Floor, Long> {
 }

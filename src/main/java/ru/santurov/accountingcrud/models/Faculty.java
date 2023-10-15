@@ -4,9 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "department")
+@Table(name = "faculty")
 @Data
-public class Department {
+public class Faculty {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -14,8 +14,4 @@ public class Department {
 
     @Column(name = "name")
     private String name;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "faculty_id")
-    private Faculty parentFaculty;
 }

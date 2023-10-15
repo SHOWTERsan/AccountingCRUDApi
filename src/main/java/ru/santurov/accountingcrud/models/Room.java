@@ -5,7 +5,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 @Entity
-@Table(name = "Rooms")
+@Table(name = "room")
 @Data
 public class Room {
     @Id
@@ -13,16 +13,22 @@ public class Room {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "room_number")
-    private int roomNumber;
+    @Column(name = "number")
+    private int number;
 
-    @Column(name = "room_name")
-    private String roomName;
+    @Column(name = "name")
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "corps_id")
-    private Corps corps;
+    private Corpus corps;
 
-    @Column(name = "height")
-    private BigDecimal height;
+    @Column(name = "width")
+    private BigDecimal width;
+
+    @Column(name = "length")
+    private BigDecimal length;
+
+    @Column(name = "floor_number")
+    private String floorNumber;
 }
