@@ -12,7 +12,7 @@ public class Corpus {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
 
     @Column(name = "location")
@@ -20,5 +20,5 @@ public class Corpus {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "faculty_id")
-    private Faculty parentFaulty;
+    private Faculty parentFaculty;
 }

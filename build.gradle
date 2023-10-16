@@ -26,10 +26,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-//    implementation 'org.springframework.data:spring-data-rest-hal-explorer'
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc:12.4.1.jre11'
     implementation 'com.microsoft.sqlserver:mssql-jdbc_auth:12.4.1.x64'
+
+    compileOnly 'net.sf.ucanaccess:ucanaccess:5.0.1'
 
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

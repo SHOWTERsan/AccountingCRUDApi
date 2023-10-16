@@ -24,10 +24,10 @@ public class Room {
     private Corpus corps;
 
     @Column(name = "width")
-    private BigDecimal width;
+    private float width;
 
     @Column(name = "length")
-    private BigDecimal length;
+    private float length;
 
     @Column(name = "floor_number")
     private String floorNumber;
