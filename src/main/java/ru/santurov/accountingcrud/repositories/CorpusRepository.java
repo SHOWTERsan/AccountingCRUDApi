@@ -6,4 +6,5 @@ import ru.santurov.accountingcrud.models.Corpus;
 
 @Repository
 public interface CorpusRepository extends CrudRepository<Corpus, Long> {
+    Corpus findByName(String name);
 }

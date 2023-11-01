@@ -20,7 +20,7 @@ public class Room {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "corps_id")
+    @JoinColumn(name = "corpus_id")
     private Corpus corps;
 
     @Column(name = "width")
@@ -29,6 +29,7 @@ public class Room {
     @Column(name = "length")
     private float length;
 
-    @Column(name = "floor_number")
-    private String floorNumber;
+    @ManyToOne
+    @JoinColumn(name = "floor_number")
+    private Floor floorNumber;
 }

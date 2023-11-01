@@ -18,7 +18,7 @@ public class Corpus {
     @Column(name = "location")
     private String location;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "faculty_id")
     private Faculty parentFaculty;
 }

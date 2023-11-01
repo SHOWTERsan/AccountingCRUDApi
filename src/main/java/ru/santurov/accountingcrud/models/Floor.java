@@ -10,6 +10,7 @@ public class Floor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "height")
     private String height;
 }

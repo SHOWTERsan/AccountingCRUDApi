@@ -15,7 +15,7 @@ public class Department {
     @Column(name = "name")
     private String name;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "faculty_id")
     private Faculty parentFaculty;
 }
