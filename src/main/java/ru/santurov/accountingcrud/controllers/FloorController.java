@@ -19,4 +19,5 @@ public class FloorController {
     public List<Floor> getFloors() {
         return floorService.getFloors();
     }
+    // низкий 3
 }

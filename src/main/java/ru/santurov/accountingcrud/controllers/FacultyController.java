@@ -19,7 +19,7 @@ public class FacultyController {
     public List<Faculty> getFaculties() {
         return facultyService.getFaculties();
     }
-
+    // низкий 3
     @PatchMapping("/{id}")
     public ResponseEntity<Faculty> updateFaculty(@PathVariable(value = "id") long id, @RequestBody Faculty facultyDetails) {
         Faculty faculty = facultyService.updateFaculty(id, facultyDetails);
@@ -29,6 +29,7 @@ public class FacultyController {
             return ResponseEntity.ok(faculty);
         }
     }
+    // низкий 3
 
     @PostMapping
     public ResponseEntity<Faculty> createFaculty(@RequestBody Faculty newFaculty) {
@@ -38,7 +39,7 @@ public class FacultyController {
         Faculty faculty = facultyService.saveFaculty(newFaculty);
         return new ResponseEntity<>(faculty, HttpStatus.CREATED);
     }
-
+    // низкий 3
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteFaculty(@PathVariable(value = "id") long id) {
         facultyService.deleteById(id);

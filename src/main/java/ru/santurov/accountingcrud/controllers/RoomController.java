@@ -24,7 +24,7 @@ public class RoomController {
         Page<Room> page = roomService.getRooms(pageable);
         return new ResponseEntity<>(page, HttpStatus.OK);
     }
-
+//Средний (5)
     @PostMapping
     public ResponseEntity<Room> createRoom(@RequestBody RoomDTO newRoom) {
         if (newRoom.getName().trim().isEmpty()) {
@@ -34,7 +34,7 @@ public class RoomController {
         Room room = roomService.saveRoom(roomService.toNormal(newRoom));
         return new ResponseEntity<>(room, HttpStatus.CREATED);
     }
-
+//Высокий (6)
     @PatchMapping("{id}")
     public ResponseEntity<Room> updateRoom(@PathVariable(value = "id") Long id, @RequestBody Room newRoom) {
         Room room = roomService.updateRoom(id, newRoom);
@@ -44,7 +44,7 @@ public class RoomController {
             return ResponseEntity.ok(room);
         }
     }
-
+//Высокий (6)
     @DeleteMapping("{id}")
     public ResponseEntity<Void> deleteRoom(@PathVariable(value = "id") Long id){
         roomService.deleteRoom(id);

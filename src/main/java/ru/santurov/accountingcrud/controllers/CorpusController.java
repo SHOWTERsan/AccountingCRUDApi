@@ -19,7 +19,7 @@ public class CorpusController {
     public List<Corpus> getCorps() {
         return corpusService.getCorps();
     }
-
+    // низкий 3
     @PatchMapping("{id}")
     public ResponseEntity<Corpus> updateCorpus(@PathVariable(name = "id") long id, @RequestBody Corpus corpusDetails) {
         Corpus corpus = corpusService.updateCorpus(id,corpusDetails);
@@ -29,6 +29,7 @@ public class CorpusController {
         }
         else return ResponseEntity.ok(corpus);
     }
+    // низкий 3
 
     @PostMapping()
     public ResponseEntity<Corpus> createCorpus(@RequestBody Corpus newCorpus) {
@@ -39,7 +40,7 @@ public class CorpusController {
         Corpus corpus = corpusService.createCorpus(newCorpus);
         return new ResponseEntity<>(corpus, HttpStatus.CREATED);
     }
-
+    // низкий 3
     @DeleteMapping("{id}")
     public ResponseEntity<Void> deleteCorpus(@PathVariable(name = "id") long id) {
         corpusService.deleteCorpus(id);

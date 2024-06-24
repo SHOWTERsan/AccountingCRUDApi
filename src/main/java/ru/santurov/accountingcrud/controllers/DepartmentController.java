@@ -19,7 +19,7 @@ public class DepartmentController {
     public List<Department> getDepartments() {
         return departmentService.getDepartments();
     }
-
+    // низкий 3
     @PatchMapping("{id}")
     public ResponseEntity<Department> updateFaculty(@PathVariable(name = "id") long id, @RequestBody Department departmentDetails) {
         Department department = departmentService.updateDepartment(id,departmentDetails);
@@ -29,7 +29,7 @@ public class DepartmentController {
         }
         else return ResponseEntity.ok(department);
     }
-
+    // низкий 3
     @PostMapping("")
     public ResponseEntity<Department> createDepartment(@RequestBody Department newDepartment) {
         if (newDepartment.getName().trim().isEmpty()) {
@@ -39,6 +39,7 @@ public class DepartmentController {
         Department department = departmentService.createDepartment(newDepartment);
         return new ResponseEntity<>(department, HttpStatus.CREATED);
     }
+    // низкий 3
 
     @DeleteMapping("{id}")
     public ResponseEntity<Void> deleteDepartment(@PathVariable(name = "id") long id) {
